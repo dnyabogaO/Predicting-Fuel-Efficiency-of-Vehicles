@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Vehicle Fuel Usage Prediction</h2>
+            <h3>Number of Cylinders</h3>
+            <input id="first" name="Cylinder" type="number ">
+            <h3>Displacement</h3><br><input id="second" name="Displacement" required="required">
+            <h3>Horsepower</h3><input id="third" name="Horsepower" required="required">
+            <h3>Vehicle Weight</h3><br><input id="fourth" name="Weight" required="required">
+             <h3>Acceleration</h3><br><input id="fifty" name="Acceleration" required="required">
+            <h3>Model Year</h3><br><input id="sixty" name="Model Year" required="required">
+            <h3>Origin</h3><br><select name="Origin" id="Origin" required="required">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Germany">Germany</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Predict Fuel Efficiency</button>
+            <br>
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}</h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+
+        #Origin {
+            width: 100px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #Origin:hover {
+            background-color: coral;
+        }
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+         #fifty {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+         #sixty {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #sub {
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+    </style>
+</body>
+
